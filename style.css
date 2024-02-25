@@ -1,0 +1,74 @@
+/* ---------- RESET CSS ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: unset;
+    color: inherit;
+}
+
+/* --------- FLEXBOX RULES --------- */
+
+.flex {
+    display: flex;
+}
+.col {
+    flex-direction: column;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.aic {
+    align-items: center;
+}
+.jcsb {
+    justify-content: space-between;
+}
+.gap-xl {
+    gap: 64px;
+} 
+.gap-l {
+    gap: 46px;
+} 
+.gap-m {
+    gap: 32px;
+}
+.gap-s {
+    gap: 24px;
+}
+
+/* ---------- OTHER RULES ---------- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 32px;
+}
+.button {
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: lightgreen;
+    color:#fff;
+}
+.card {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 16px;
+}
+.hide {
+    display: none;
+}
+input {
+    display: block;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 12px;
+}
+.price {
+    font-size: 24px;
+}
