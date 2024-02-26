@@ -23,21 +23,35 @@
 
 // Puntatori
 let btn = document.getElementById('button');
-let h1 = document.getElementsByTagName('h1');
-let link = document.getElementsByTagName('a');
-let img = document.getElementsByClassName('img');
+let h1 = document.getElementById('h1');
+let links = document.getElementsByTagName('a');
+let imgs = document.getElementsByClassName('img');
 let address = document.getElementById('address');
+let prices = document.getElementsByClassName('price');
 
-if (img.length > 0) {
-    console.log(img); // stampa il primo elemento con la classe "img" trovato
-  } else {
-    console.log("Nessun elemento con la classe 'img' trovato");
-  }
+function randomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    const color = `rgb(${r}, ${g}, ${b})`;
+    
+    return color;
+}
 
 btn.addEventListener('click', function() {
     h1.innerHTML = "Nuovo h1";
-    document.body.style.backgroundColor = "#ddd";
+    document.body.style.backgroundColor = "#f0f0f0";
     address.innerHTML = "<strong>Via Luigi Verdi 13</strong>, Milano";
-    link.classList.add("new-class");
-    img.classList.toggle("hide");
+
+    for (let i = 0; i < links.length; i++) {
+        links[i].classList.add("new-class");
+    }
+
+    for (let i = 0; i < imgs.length; i++) {
+        imgs[i].classList.toggle("hide");
+    }
+
+    for (let i = 0; i < prices.length; i++) {
+        prices[i].style.color = randomColor();
+    }
 })
